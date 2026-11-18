@@ -479,8 +479,8 @@ GROUP BY mot_cle, mot_cle_libelle, theme_code;
 COMMENT ON VIEW le_crible.v_mots_cles_partages IS 'Mots clés employés par plusieurs candidats : points de convergence.';
 
 -- =============================================================================
--- 7. RÔLE DE LECTURE (Metabase)
--- Rôle sans mot de passe ni droit de connexion. Créer à part l'utilisateur
+-- 7. RÔLES DE LECTURE (Metabase) ET D'ÉCRITURE LIMITÉE
+-- Rôles sans mot de passe ni droit de connexion. Créer à part l'utilisateur
 -- Metabase et lui donner ce rôle (voir README). Nécessite les droits CREATEROLE ;
 -- sinon, le bloc est ignoré avec un simple avertissement.
 -- =============================================================================
@@ -494,6 +494,23 @@ BEGIN
   ALTER DEFAULT PRIVILEGES IN SCHEMA le_crible GRANT SELECT ON TABLES TO le_crible_lecture;
 EXCEPTION WHEN insufficient_privilege THEN
   RAISE WARNING 'Rôle le_crible_lecture non créé ou non autorisé (droits insuffisants). Voir README.';
+END;
+$$;
+
+-- Rôle d'écriture limitée (contributeurs : NEXTE, RAW). Lecture + ajout +
+-- modification, mais pas de suppression ni de changement de structure.
+DO $$
+BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'le_crible_ecriture') THEN
+    CREATE ROLE le_crible_ecriture NOLOGIN;
+  END IF;
+  GRANT le_crible_lecture TO le_crible_ecriture;
+  GRANT INSERT, UPDATE ON ALL TABLES IN SCHEMA le_crible TO le_crible_ecriture;
+  GRANT USAGE ON ALL SEQUENCES IN SCHEMA le_crible TO le_crible_ecriture;
+  ALTER DEFAULT PRIVILEGES IN SCHEMA le_crible GRANT INSERT, UPDATE ON TABLES TO le_crible_ecriture;
+  ALTER DEFAULT PRIVILEGES IN SCHEMA le_crible GRANT USAGE ON SEQUENCES TO le_crible_ecriture;
+EXCEPTION WHEN insufficient_privilege THEN
+  RAISE WARNING 'Rôle le_crible_ecriture non créé ou non autorisé (droits insuffisants). Voir README.';
 END;
 $$;
 

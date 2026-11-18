@@ -76,6 +76,14 @@ CREATE ROLE metabase_crible LOGIN PASSWORD '...';  -- mot de passe hors dépôt
 GRANT le_crible_lecture TO metabase_crible;
 ```
 
+Le script crée aussi `le_crible_ecriture` (lecture, ajout et modification,
+sans suppression ni changement de structure) pour les contributeurs :
+
+```sql
+CREATE ROLE kevin_raw LOGIN PASSWORD '...';        -- mot de passe hors dépôt
+GRANT le_crible_ecriture TO kevin_raw;             -- ou le_crible_lecture
+```
+
 Dans Metabase, ajouter la base avec cet utilisateur et limiter les schémas à
 `le_crible`. Les vues prévues pour les tableaux de bord :
 
