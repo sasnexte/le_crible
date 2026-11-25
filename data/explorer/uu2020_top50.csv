@@ -1,0 +1,51 @@
+rang;code_uu;libelle;type_uu;nb_communes;communes_centre;regions;departements;drom;pop_2023;pop_2012;evol_pop;tcam_pop_pct;superficie_km2;densite_hab_km2;logements_2023;logements_2012;evol_logements_pct;part_rp_pct;part_rs_pct;part_vacants_pct;part_vacants_2012_pct;part_proprietaires_pct;part_proprietaires_2012_pct;niveau_vie_median_eur;taux_pauvrete_pct
+1;00851;Paris;Agglomération inter-départementale;406;Paris;Île-de-France;"78 ; 91 ; 95 ; 77 ; 94 ; 93 ; 92 ; 75";False;11013774;10544575;469199;0.4;2824.19;3900;5480479;4938902;11.0;88.6;4.2;7.1;6.0;43.8;44.9;28000.0;18.3
+2;00760;Lyon;Agglomération inter-départementale;123;Lyon;Auvergne-Rhône-Alpes;"69 ; 01 ; 38";False;1721721;1578712;143009;0.79;1141.43;1508;891811;761783;17.1;88.9;3.4;7.7;7.1;46.0;46.5;27450.0;17.2
+3;00759;Marseille-Aix-en-Provence;Agglomération inter-départementale;50;Marseille;Provence-Alpes-Côte d'Azur;"13 ; 83";False;1648953;1570525;78428;0.44;1758.23;938;850274;754332;12.7;89.5;3.5;7.0;6.8;48.4;49.0;25260.0;21.7
+4;00758;Toulouse;Agglomération inter-départementale;81;Toulouse;Occitanie;"31 ; 82";False;1093783;940016;153767;1.39;957.52;1142;600510;482231;24.5;90.5;2.8;6.7;6.7;44.7;46.9;27030.0;17.4
+5;59702;Lille (partie française);Agglomération internationale;60;Lille;Hauts-de-France;59;False;1063720;1024299;39421;0.34;446.69;2381;530446;467772;13.4;91.7;1.7;6.5;6.1;46.7;48.7;24170.0;22.5
+6;33701;Bordeaux;Agglomération intra-départementale;73;Bordeaux;Nouvelle-Aquitaine;33;False;1034027;890066;143961;1.37;1287.29;803;551895;445303;23.9;91.1;3.6;5.3;5.3;46.9;48.8;27660.0;14.7
+7;06701;Nice;Agglomération intra-départementale;51;Nice;Provence-Alpes-Côte d'Azur;06;False;987709;943695;44014;0.42;743.61;1328;672423;620228;8.4;70.9;21.1;8.0;8.7;54.3;53.8;26370.0;17.9
+8;44701;Nantes;Agglomération intra-départementale;22;Nantes;Pays de la Loire;44;False;689036;602280;86756;1.23;498.62;1382;368226;301938;22.0;91.2;3.5;5.2;5.0;49.2;52.3;27880.0;14.3
+9;00757;Toulon;Agglomération inter-départementale;27;Toulon;Provence-Alpes-Côte d'Azur;"83 ; 13";False;603708;561155;42553;0.67;763.68;791;372330;333312;11.7;79.6;15.7;4.7;6.9;53.9;55.0;26030.0;17.2
+10;00756;Douai-Lens;Agglomération inter-départementale;67;"Douai ; Lens ; Liévin ; Hénin-Beaumont";Hauts-de-France;"62 ; 59";False;505025;506097;-1072;-0.02;485.19;1041;234969;219841;6.9;91.9;0.6;7.5;6.9;48.7;47.1;21470.0;24.7
+11;67701;Strasbourg (partie française);Agglomération internationale;23;Strasbourg;Grand Est;67;False;494536;454475;40061;0.77;240.16;2059;265803;227482;16.8;88.4;3.6;7.9;6.8;36.3;37.0;23930.0;24.2
+12;34701;Montpellier;Agglomération intra-départementale;22;Montpellier;Occitanie;34;False;485823;406891;78932;1.62;309.95;1567;273776;216873;26.2;89.9;3.9;6.2;7.2;40.4;42.8;24650.0;23.1
+13;00755;Rouen;Agglomération inter-départementale;50;Rouen;Normandie;"76 ; 27";False;481104;466512;14592;0.28;461.06;1043;259880;233143;11.5;90.3;2.0;7.7;6.9;42.1;43.2;24160.0;20.8
+14;00754;Avignon;Agglomération inter-régionale;59;Avignon;Provence-Alpes-Côte d'Azur / Occitanie;"84 ; 13 ; 30";False;470028;443400;26628;0.53;1364.42;344;254378;223416;13.9;85.3;5.6;9.1;9.6;53.9;53.8;23840.0;21.7
+15;38701;Grenoble;Agglomération intra-départementale;38;Grenoble;Auvergne-Rhône-Alpes;38;False;457409;445753;11656;0.23;358.05;1278;249569;221805;12.5;88.1;2.7;9.3;7.0;49.9;51.0;26790.0;16.9
+16;35701;Rennes;Agglomération intra-départementale;16;Rennes;Bretagne;35;False;381156;337884;43272;1.1;327.69;1163;210687;176004;19.7;90.5;3.9;5.6;5.6;42.3;44.3;27110.0;17.4
+17;00753;Saint-Étienne;Agglomération inter-départementale;32;Saint-Étienne;Auvergne-Rhône-Alpes;"42 ; 43";False;376371;371590;4781;0.12;414.02;909;200134;189515;5.6;87.5;1.9;10.6;9.8;48.5;49.3;23170.0;23.0
+18;37701;Tours;Agglomération intra-départementale;38;Tours;Centre-Val de Loire;37;False;370118;353785;16333;0.41;684.93;540;207706;183902;12.9;88.8;3.1;8.1;7.0;48.7;50.0;25960.0;16.6
+19;00752;Béthune;Agglomération inter-départementale;94;"Béthune ; Bruay-la-Buissière";Hauts-de-France;"62 ; 59";False;356094;355335;759;0.02;760.26;468;166900;154724;7.9;91.9;0.7;7.4;6.4;59.9;59.2;23470.0;18.2
+20;59701;Valenciennes (partie française);Agglomération internationale;56;Valenciennes;Hauts-de-France;59;False;332401;334653;-2252;-0.06;439.97;756;158991;148177;7.3;90.5;1.1;8.4;7.5;50.3;51.3;21120.0;26.3
+21;57701;Metz;Agglomération intra-départementale;42;Metz;Grand Est;57;False;294271;287581;6690;0.21;308.76;953;158285;142937;10.7;89.2;1.8;9.0;9.2;45.6;46.2;24820.0;20.7
+22;45701;Orléans;Agglomération intra-départementale;19;Orléans;Centre-Val de Loire;45;False;292837;271550;21287;0.69;289.52;1011;150384;133300;12.8;89.7;2.7;7.7;7.4;50.7;51.4;25740.0;17.4
+23;54701;Nancy;Agglomération intra-départementale;28;Nancy;Grand Est;54;False;285561;284974;587;0.02;245.9;1161;167226;153176;9.2;87.5;3.0;9.5;8.7;43.1;42.9;25240.0;20.0
+24;63701;Clermont-Ferrand;Agglomération intra-départementale;17;Clermont-Ferrand;Auvergne-Rhône-Alpes;63;False;272529;262911;9618;0.33;180.81;1507;164126;148158;10.8;86.5;4.5;8.9;8.5;44.7;45.5;25360.0;19.5
+25;00751;Bayonne (partie française);Agglomération internationale;28;"Bayonne ; Anglet";Nouvelle-Aquitaine;"64 ; 40";False;262866;233532;29334;1.08;448.81;586;180415;153125;17.8;74.8;21.1;4.1;4.3;53.8;56.1;27040.0;12.7
+26;9A701;Pointe-à-Pitre-Les Abymes;Agglomération intra-départementale;11;"Les Abymes ; Baie-Mahault ; Le Gosier";Guadeloupe;971;True;253438;257361;-3923;-0.14;729.72;347;155743;135458;15.0;75.7;11.3;13.0;13.1;55.3;55.6;;
+27;49701;Angers;Agglomération intra-départementale;12;Angers;Pays de la Loire;49;False;253408;231138;22270;0.84;243.25;1042;138577;120952;14.6;91.6;2.8;5.6;6.7;40.8;41.4;25500.0;17.4
+28;21701;Dijon;Agglomération intra-départementale;15;Dijon;Bourgogne-Franche-Comté;21;False;252712;239327;13385;0.5;169.62;1490;146452;129237;13.3;90.1;3.3;6.6;6.9;45.6;48.5;25550.0;17.4
+29;68701;Mulhouse;Agglomération intra-départementale;20;Mulhouse;Grand Est;68;False;246660;245797;863;0.03;239.14;1031;126911;118355;7.2;87.6;1.6;10.9;10.2;50.8;51.9;23870.0;22.7
+30;76701;Le Havre;Agglomération intra-départementale;18;Le Havre;Normandie;76;False;232175;238421;-6246;-0.24;194.92;1191;126233;117143;7.8;88.3;2.2;9.5;7.4;44.9;45.6;24180.0;19.9
+31;72701;Le Mans;Agglomération intra-départementale;18;Le Mans;Pays de la Loire;72;False;218576;213607;4969;0.21;322.81;677;117932;109446;7.8;89.0;2.8;8.1;7.7;52.1;53.1;24800.0;19.1
+32;14701;Caen;Agglomération intra-départementale;24;Caen;Normandie;14;False;216647;202469;14178;0.62;173.57;1248;123424;104767;17.8;90.4;2.6;7.1;5.7;37.3;40.0;24390.0;19.8
+33;51701;Reims;Agglomération intra-départementale;9;Reims;Grand Est;51;False;214496;213131;1365;0.06;106.8;2008;125380;111973;12.0;87.3;3.4;9.4;7.0;32.3;32.1;23620.0;22.4
+34;66701;Perpignan;Agglomération intra-départementale;15;Perpignan;Occitanie;66;False;209325;195679;13646;0.61;217.51;962;118317;103944;13.8;84.6;3.5;11.8;11.7;51.4;52.5;21640.0;27.8
+35;64701;Pau;Agglomération intra-départementale;55;Pau;Nouvelle-Aquitaine;64;False;208785;198349;10436;0.47;530.87;393;117933;104955;12.4;87.7;2.6;9.7;10.6;55.2;55.7;26500.0;14.9
+36;29701;Brest;Agglomération intra-départementale;7;Brest;Bretagne;29;False;207010;199016;7994;0.36;199.39;1038;116352;107065;8.7;90.6;3.5;5.8;7.2;51.0;53.4;25890.0;15.8
+37;73601;Chambéry;Agglomération intra-départementale;35;"Chambéry ; Aix-les-Bains";Auvergne-Rhône-Alpes;73;False;202600;182432;20168;0.96;327.5;619;112863;95120;18.7;86.8;6.0;7.2;6.7;53.7;54.2;28320.0;12.4
+38;00653;Genève (SUI)-Annemasse (partie française);Agglomération internationale;34;Annemasse;Auvergne-Rhône-Alpes;"74 ; 01";False;200767;166347;34420;1.72;314.93;637;108392;84977;27.6;84.1;7.6;8.3;6.5;51.3;53.2;35960.0;16.3
+39;44601;Saint-Nazaire;Agglomération intra-départementale;17;Saint-Nazaire;Pays de la Loire;44;False;196767;178072;18695;0.91;472.15;417;151018;131802;14.6;64.8;30.3;4.9;5.4;62.1;62.6;27020.0;12.2
+40;9D603;Saint-Denis;Agglomération intra-départementale;2;Saint-Denis;La Réunion;974;True;192727;176834;15893;0.79;230.0;838;92414;79261;16.6;89.9;1.7;8.4;10.7;34.8;33.9;20460.0;34.1
+41;30601;Nîmes;Agglomération intra-départementale;9;Nîmes;Occitanie;30;False;187287;180449;6838;0.34;265.82;705;104948;93918;11.7;84.9;4.9;10.2;8.9;44.9;46.3;22030.0;28.7
+42;87601;Limoges;Agglomération intra-départementale;10;Limoges;Nouvelle-Aquitaine;87;False;186707;189174;-2467;-0.12;270.85;689;110737;104724;5.7;89.0;2.9;8.1;7.6;48.2;48.1;24480.0;20.5
+43;74601;Annecy;Agglomération intra-départementale;14;Annecy;Auvergne-Rhône-Alpes;74;False;186633;164776;21857;1.14;226.96;822;105014;85110;23.4;85.5;7.7;6.8;5.9;53.6;55.4;30940.0;10.4
+44;9D602;Saint-Paul;Agglomération intra-départementale;3;Saint-Paul;La Réunion;974;True;178625;172251;6374;0.33;376.25;475;80170;65254;22.9;87.2;5.0;7.8;6.3;53.7;54.1;20600.0;31.7
+45;9D601;Saint-Pierre;Agglomération intra-départementale;3;"Saint-Pierre ; Le Tampon";La Réunion;974;True;174793;162859;11934;0.64;328.25;532;82007;67595;21.3;88.6;3.8;7.6;6.9;50.5;52.7;19120.0;36.2
+46;80601;Amiens;Agglomération intra-départementale;11;Amiens;Hauts-de-France;80;False;166909;162141;4768;0.26;137.27;1216;93722;82456;13.7;88.8;2.6;8.7;8.3;35.9;38.4;22660.0;25.8
+47;59602;Dunkerque;Agglomération intra-départementale;8;Dunkerque;Hauts-de-France;59;False;161475;169857;-8382;-0.46;148.67;1086;81802;77909;5.0;90.9;3.0;6.1;5.3;48.6;48.1;22660.0;21.9
+48;17601;La Rochelle;Agglomération intra-départementale;11;La Rochelle;Nouvelle-Aquitaine;17;False;141525;129090;12435;0.84;129.36;1094;92867;77907;19.2;81.1;13.0;5.9;6.5;47.7;48.3;26960.0;14.9
+49;25601;Besançon;Agglomération intra-départementale;13;Besançon;Bourgogne-Franche-Comté;25;False;140404;137418;2986;0.2;134.88;1041;83475;76948;8.5;88.5;2.4;9.1;8.0;40.6;39.7;24520.0;21.0
+50;10601;Troyes;Agglomération intra-départementale;18;Troyes;Grand Est;10;False;139879;131474;8405;0.56;163.48;856;77588;69180;12.2;88.8;3.8;7.5;8.2;42.1;44.9;22510.0;24.0
