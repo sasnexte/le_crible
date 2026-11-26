@@ -2,7 +2,7 @@
 
 Carte interactive (D3, sans fond de tuiles) des 135 unités urbaines INSEE 2020 de 50 000 habitants et plus, métropole + encarts outre-mer.
 
-- `data/perimetre.json` : portrait des 135 UU (issu de `data/explorer/uu2020_perimetre*.csv`), avec étiquettes métropole / diagonale du vide / outre-mer.
+- `data/perimetre.json` : portrait des 135 UU (issu de `data/explorer/uu2020_perimetre*.csv`), avec étiquettes métropole / outre-mer.
 - `data/*.json` (TopoJSON) : contours INSEE `fonds_uu2020_2026` simplifiés pour l'affichage avec mapshaper (départements 4 %, toutes UU 8 %, UU du périmètre 25 %, communes du périmètre 15 %). Ne pas utiliser pour des calculs : la géométrie de référence est celle chargée dans PostGIS (`explorer.uu2020`).
 
 Régénérer les contours (depuis le dossier où `fonds_uu2020_2026.zip` est décompressé) :

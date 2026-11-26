@@ -3,7 +3,7 @@
 
 Télécharge les fichiers INSEE officiels, classe les unités urbaines 2020
 (France entière, DROM compris) par population municipale du dernier
-recensement, retient celles de 50 000 habitants et plus, les étiquette (métropole, diagonale du vide), et produit les CSV à charger dans Postgres (schéma explorer).
+recensement, retient celles de 50 000 habitants et plus, les étiquette (métropole, outre-mer), et produit les CSV à charger dans Postgres (schéma explorer).
 
 Sources (INSEE) :
   - Zonage UU2020, géographie au 01/01/2026 : https://www.insee.fr/fr/information/4802589
@@ -26,9 +26,6 @@ AN_REF, AN_BASE = "2023", "2012"
 # l'échelle d'analyse reste l'unité urbaine.
 METROPOLES = {'00851', '00760', '00759', '59702', '33701', '00758', '44701', '06701', '67701', '34701', '35701',
               '38701', '00755', '00757', '37701', '29701', '54701', '57701', '45701', '21701', '00753', '63701'}
-# Diagonale du vide : départements métropolitains de moins de 50 hab/km² (RP 2023) situés sur l'axe Meuse-Landes,
-# hors massifs alpins (04, 05), Corse et Orne. Une UU y appartient si son département principal (le plus de communes) en fait partie.
-DIAGONALE = {'03', '09', '12', '15', '18', '19', '23', '24', '32', '36', '40', '43', '46', '48', '52', '55', '58', '70', '89'}
 REG = {'01': 'Guadeloupe', '02': 'Martinique', '03': 'Guyane', '04': 'La Réunion', '06': 'Mayotte',
        '11': 'Île-de-France', '24': 'Centre-Val de Loire', '27': 'Bourgogne-Franche-Comté', '28': 'Normandie',
        '32': 'Hauts-de-France', '44': 'Grand Est', '52': 'Pays de la Loire', '53': 'Bretagne',
@@ -92,7 +89,6 @@ def main(dl, out):
             'departements': ' ; '.join(k for k, _ in deps.most_common()),
             'drom': u[:2] in ('9A', '9B', '9C', '9D', '9F'),
             'metropole': u in METROPOLES,
-            'diagonale_vide': deps.most_common(1)[0][0] in DIAGONALE,
             'tranche': '100 000 hab. et plus' if p23 >= 100000 else '50 000 à 99 999 hab.',
             'pop_' + AN_REF: int(p23), 'pop_' + AN_BASE: int(p12), 'evol_pop': int(p23 - p12),
             'tcam_pop_pct': round(100 * ((p23 / p12) ** (1 / (int(AN_REF) - int(AN_BASE))) - 1), 2),
