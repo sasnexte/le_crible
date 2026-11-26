@@ -1,0 +1,137 @@
+rang;code_uu;libelle;dpop_2012_2023;drp_2012_2023;ratio_2012_2023;dpop_2012_2017;drp_2012_2017;ratio_2012_2017;dpop_2017_2023;drp_2017_2023;ratio_2017_2023;taille_menages_2012;taille_menages_2023;drp_croissance;drp_desserrement;tcam_pop;tcam_rp;ecart_tcam_pts;classe;classe_libelle
+1;00851;Paris;469199;367216;1.28;234968;143112;1.64;234231;224104;1.05;2.301;2.23;223442;143774;0.4;0.72;-0.32;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+2;00760;Lyon;143009;98202;1.46;75239;45866;1.64;67770;52336;1.29;2.216;2.127;69330;28873;0.79;1.21;-0.42;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+3;00759;Marseille-Aix-en-Provence;78428;77032;1.02;25801;27332;0.94;52627;49700;1.06;2.233;2.116;39003;38029;0.44;0.97;-0.53;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+4;00758;Toulouse;153767;101361;1.52;64731;40068;1.62;89036;61292;1.45;2.081;1.978;78338;23022;1.39;1.89;-0.5;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+5;59702;Lille (partie française);39421;50098;0.79;19563;18480;1.06;19858;31618;0.63;2.293;2.145;20012;30086;0.34;0.99;-0.65;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+6;33701;Bordeaux;143961;88667;1.62;67110;38881;1.73;76851;49786;1.54;2.1;2.022;72691;15976;1.37;1.78;-0.41;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+7;06701;Nice;44014;35811;1.23;-809;4265;-0.19;44823;31546;1.42;2.091;2.025;21461;14350;0.42;0.71;-0.29;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+8;44701;Nantes;86756;55747;1.56;43044;25968;1.66;43712;29779;1.47;2.094;2.002;42832;12915;1.23;1.66;-0.43;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+9;00757;Toulon;42553;38435;1.11;14192;14537;0.98;28361;23898;1.19;2.115;1.989;22041;16394;0.67;1.27;-0.6;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+10;00756;Douai-Lens;-1072;11880;-0.09;-2131;3955;-0.54;1059;7925;0.13;2.443;2.301;-725;12606;-0.02;0.52;-0.54;D;Population en baisse, parc en hausse
+11;67701;Strasbourg (partie française);40061;26814;1.49;12963;9494;1.37;27098;17320;1.56;2.12;2.05;19753;7061;0.77;1.11;-0.34;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+12;34701;Montpellier;78932;51574;1.53;34106;21903;1.56;44826;29671;1.51;2.036;1.929;40806;10768;1.62;2.16;-0.54;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+13;00755;Rouen;14592;19533;0.75;1063;6878;0.15;13529;12655;1.07;2.115;2.007;7969;11564;0.28;0.79;-0.51;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+14;00754;Avignon;26628;23895;1.11;12311;9469;1.3;14317;14426;0.99;2.251;2.132;13081;10814;0.53;1.07;-0.54;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+15;38701;Grenoble;11656;17020;0.68;4748;7179;0.66;6908;9841;0.7;2.133;2.028;6587;10433;0.23;0.74;-0.51;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+16;35701;Rennes;43272;27373;1.58;19443;11600;1.68;23829;15773;1.51;1.982;1.931;23060;4313;1.1;1.42;-0.32;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+17;00753;Saint-Étienne;4781;7637;0.63;2337;3173;0.74;2444;4464;0.55;2.168;2.105;2587;5050;0.12;0.41;-0.29;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+18;37701;Tours;16333;17091;0.96;4531;5722;0.79;11802;11369;1.04;2.053;1.957;8830;8261;0.41;0.89;-0.48;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+19;00752;Béthune;759;9172;0.08;717;3600;0.2;42;5573;0.01;2.43;2.288;263;8910;0.02;0.56;-0.54;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+20;59701;Valenciennes (partie française);-2252;7417;-0.3;589;3215;0.18;-2841;4202;-0.68;2.409;2.27;-895;8312;-0.06;0.48;-0.54;D;Population en baisse, parc en hausse
+21;57701;Metz;6690;12643;0.53;-1663;3776;-0.44;8353;8867;0.94;2.152;2.018;4111;8532;0.21;0.86;-0.65;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+22;45701;Orléans;21287;13220;1.61;10719;6167;1.74;10568;7054;1.5;2.177;2.118;9818;3402;0.69;0.94;-0.25;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+23;54701;Nancy;587;8153;0.07;1067;3930;0.27;-480;4223;-0.11;1.976;1.887;1635;6518;0.02;0.52;-0.5;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+24;63701;Clermont-Ferrand;9618;10381;0.93;5785;5483;1.06;3833;4899;0.78;1.933;1.859;5110;5272;0.33;0.69;-0.36;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+25;00751;Bayonne (partie française);29334;22513;1.3;10734;7794;1.38;18600;14719;1.26;2.023;1.904;15440;7073;1.08;1.67;-0.59;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+26;9A701;Pointe-à-Pitre-Les Abymes;-3923;10755;-0.36;-5090;3580;-1.42;1167;7175;0.16;2.38;2.125;-2119;12873;-0.14;0.87;-1.01;D;Population en baisse, parc en hausse
+27;49701;Angers;22270;15945;1.4;8724;7086;1.23;13546;8859;1.53;2.002;1.936;12171;3774;0.84;1.23;-0.39;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+28;21701;Dijon;13385;13745;0.97;6548;5363;1.22;6837;8382;0.82;1.953;1.852;7338;6407;0.5;1.0;-0.5;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+29;68701;Mulhouse;863;5477;0.16;895;1639;0.55;-32;3838;-0.01;2.273;2.172;557;4920;0.03;0.46;-0.43;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+30;76701;Le Havre;-6246;4254;-1.47;-3203;1154;-2.78;-3043;3099;-0.98;2.182;2.049;-2694;6948;-0.24;0.35;-0.59;D;Population en baisse, parc en hausse
+31;72701;Le Mans;4969;5611;0.89;235;1266;0.19;4734;4344;1.09;2.085;2.023;2552;3058;0.21;0.5;-0.29;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+32;14701;Caen;14178;13720;1.03;2694;3735;0.72;11484;9985;1.15;1.983;1.873;7954;5767;0.62;1.2;-0.58;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+33;51701;Reims;1365;6488;0.21;2295;3609;0.64;-930;2879;-0.32;2.016;1.911;882;5606;0.06;0.56;-0.5;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+34;66701;Perpignan;13646;11033;1.24;5382;4708;1.14;8264;6325;1.31;2.149;2.041;6333;4701;0.61;1.07;-0.46;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+35;64701;Pau;10436;11321;0.92;2317;4179;0.55;8119;7143;1.14;2.087;1.962;5476;5845;0.47;1.06;-0.59;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+36;29701;Brest;7994;8469;0.94;2725;3684;0.74;5269;4785;1.1;1.983;1.904;4471;3997;0.36;0.76;-0.4;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+37;73601;Chambéry;20168;14791;1.36;7847;5751;1.36;12321;9040;1.36;2.129;2.015;10095;4696;0.96;1.5;-0.54;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+38;00653;Genève (SUI)-Annemasse (partie française);34420;17155;2.01;16850;7940;2.12;17570;9215;1.91;2.223;2.179;15663;1492;1.72;1.91;-0.19;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+39;44601;Saint-Nazaire;18695;15132;1.24;6765;5683;1.19;11930;9449;1.26;2.102;1.967;9460;5672;0.91;1.54;-0.63;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+40;9D603;Saint-Denis;15893;13004;1.22;4936;5977;0.83;10957;7028;1.56;2.487;2.287;6882;6123;0.79;1.56;-0.77;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+41;30601;Nîmes;6838;6499;1.05;4610;3545;1.3;2228;2953;0.75;2.117;2.033;3094;3405;0.34;0.69;-0.35;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+42;87601;Limoges;-2467;3632;-0.68;-1810;1335;-1.36;-657;2297;-0.29;1.948;1.853;-1239;4870;-0.12;0.34;-0.46;D;Population en baisse, parc en hausse
+43;74601;Annecy;21857;14309;1.53;11014;6571;1.68;10843;7738;1.4;2.122;2.034;11078;3231;1.14;1.59;-0.45;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+44;9D602;Saint-Paul;6374;10405;0.61;-584;3510;-0.17;6958;6895;1.01;2.864;2.53;2542;7862;0.33;1.48;-1.15;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+45;9D601;Saint-Pierre;11934;11283;1.06;6884;5674;1.21;5050;5609;0.9;2.625;2.375;4823;6460;0.64;1.55;-0.91;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+46;80601;Amiens;4768;8296;0.57;2292;3013;0.76;2476;5283;0.47;2.092;1.949;2827;5468;0.26;0.96;-0.7;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+47;59602;Dunkerque;-8382;1773;-4.73;-3836;366;-10.48;-4546;1407;-3.23;2.301;2.139;-3736;5509;-0.46;0.22;-0.68;D;Population en baisse, parc en hausse
+48;17601;La Rochelle;12435;9683;1.28;3061;3477;0.88;9374;6206;1.51;1.919;1.832;6565;3118;0.84;1.26;-0.42;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+49;25601;Besançon;2986;4509;0.66;419;1172;0.36;2567;3336;0.77;1.905;1.837;1929;2580;0.2;0.57;-0.37;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+50;10601;Troyes;8405;6375;1.32;4964;3870;1.28;3441;2505;1.37;2.046;1.979;4248;2127;0.56;0.89;-0.33;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+51;57601;Thionville;5645;6874;0.82;1406;2493;0.56;4239;4381;0.97;2.248;2.107;3053;3821;0.38;1.03;-0.65;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+52;86601;Poitiers;4920;3786;1.3;2083;2094;0.99;2837;1692;1.68;1.859;1.823;2432;1355;0.34;0.5;-0.16;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+53;00652;Valence;5212;6266;0.83;4158;2985;1.39;1054;3281;0.32;2.155;2.016;2274;3992;0.36;0.94;-0.58;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+54;9B602;Le Robert;-7277;4128;-1.76;-4575;2100;-2.18;-2702;2028;-1.33;2.42;2.125;-3625;7753;-0.5;0.65;-1.15;D;Population en baisse, parc en hausse
+55;60601;Creil;8448;4018;2.1;3983;1910;2.09;4465;2108;2.12;2.559;2.54;3676;342;0.62;0.78;-0.16;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+56;9C601;Cayenne;21311;11257;1.89;12747;6459;1.97;8564;4798;1.79;2.894;2.653;7989;3268;1.69;2.51;-0.82;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+57;56601;Lorient;3665;4577;0.8;129;1691;0.08;3536;2885;1.23;1.988;1.9;1807;2770;0.27;0.68;-0.41;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+58;9B601;Fort-de-France;-11094;908;-12.22;-6149;319;-19.26;-4945;589;-8.4;2.221;1.989;-5644;6552;-0.83;0.15;-0.98;D;Population en baisse, parc en hausse
+59;00651;Montbéliard;-3335;557;-5.98;-2154;119;-18.14;-1181;438;-2.69;2.267;2.175;-1538;2095;-0.27;0.1;-0.37;D;Population en baisse, parc en hausse
+60;16601;Angoulême;1711;4059;0.42;237;1186;0.2;1474;2873;0.51;2.028;1.915;983;3076;0.14;0.68;-0.54;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+61;59601;Maubeuge (partie française);-4098;1153;-3.55;-976;839;-1.16;-3122;315;-9.93;2.417;2.27;-1807;2960;-0.34;0.23;-0.57;D;Population en baisse, parc en hausse
+62;83502;Fréjus;11872;8836;1.34;2249;2628;0.86;9623;6208;1.55;2.073;1.958;6267;2570;1.09;1.68;-0.59;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+63;30501;Alès;9834;6583;1.49;1265;1807;0.7;8569;4777;1.79;2.126;2.043;4823;1760;0.9;1.29;-0.39;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+64;00559;Vienne;7885;5178;1.52;2017;1669;1.21;5868;3509;1.67;2.315;2.225;3585;1593;0.74;1.13;-0.39;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+65;34502;Béziers;10503;6631;1.58;5198;2719;1.91;5305;3911;1.36;2.118;2.038;5070;1561;1.04;1.41;-0.37;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+66;22501;Saint-Brieuc;544;3367;0.16;-389;988;-0.39;933;2379;0.39;2.08;1.954;475;2892;0.05;0.66;-0.61;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+67;34501;Sète;4561;5515;0.83;-381;1359;-0.28;4942;4155;1.19;2.143;1.995;2405;3110;0.45;1.13;-0.68;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+68;74502;Cluses;9568;6625;1.44;4403;2519;1.75;5165;4107;1.26;2.415;2.25;4069;2556;0.97;1.59;-0.62;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+69;68501;Colmar;2299;4170;0.55;3153;2740;1.15;-854;1430;-0.6;2.158;2.012;1190;2979;0.22;0.88;-0.66;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+70;62503;Calais;-4309;1062;-4.06;2218;306;7.25;-6527;756;-8.63;2.316;2.129;-2553;3615;-0.41;0.23;-0.64;D;Population en baisse, parc en hausse
+71;62502;Arras;2009;3323;0.6;313;1337;0.23;1696;1986;0.85;2.15;2.032;1030;2294;0.21;0.74;-0.53;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+72;28501;Chartres;-274;2767;-0.1;-141;767;-0.18;-133;2000;-0.07;2.129;1.999;108;2660;-0.03;0.6;-0.63;D;Population en baisse, parc en hausse
+73;2A501;Ajaccio;12331;6153;2.0;6081;3025;2.01;6250;3129;2.0;2.354;2.296;5355;798;1.38;1.63;-0.25;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+74;18501;Bourges;-1945;520;-3.74;-1548;-406;3.81;-397;926;-0.43;2.003;1.943;-758;1278;-0.21;0.11;-0.32;D;Population en baisse, parc en hausse
+75;56501;Vannes;7026;5194;1.35;2645;1984;1.33;4381;3210;1.36;1.922;1.856;3816;1378;0.8;1.15;-0.35;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+76;77502;Meaux;8292;5486;1.51;3854;2553;1.51;4438;2932;1.51;2.541;2.386;3590;1896;0.95;1.58;-0.63;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+77;74501;Thonon-les-Bains;9888;6304;1.57;3261;2014;1.62;6627;4290;1.54;2.194;2.095;4739;1565;1.15;1.6;-0.45;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+78;62501;Boulogne-sur-Mer;-5319;1050;-5.07;-3723;29;-126.49;-1596;1021;-1.56;2.265;2.068;-2600;3650;-0.56;0.24;-0.8;D;Population en baisse, parc en hausse
+79;82501;Montauban;8361;4568;1.83;5185;2505;2.07;3176;2062;1.54;2.205;2.142;3610;958;0.98;1.2;-0.22;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+80;47501;Agen;1344;2371;0.57;981;1059;0.93;363;1312;0.28;2.062;1.98;820;1551;0.15;0.56;-0.41;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+81;59501;Armentières (partie française);2730;4087;0.67;136;1190;0.11;2594;2897;0.9;2.429;2.233;1321;2765;0.31;1.12;-0.81;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+82;42502;Roanne;1147;2594;0.44;-289;421;-0.69;1436;2174;0.66;2.031;1.934;666;1929;0.13;0.6;-0.47;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+83;50501;Cherbourg-en-Cotentin;-2301;2126;-1.08;-1572;356;-4.41;-729;1769;-0.41;2.081;1.918;-1197;3322;-0.25;0.48;-0.73;D;Population en baisse, parc en hausse
+84;65501;Tarbes;4386;4186;1.05;943;1336;0.71;3443;2850;1.21;1.955;1.853;2078;2108;0.51;0.95;-0.44;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+85;57501;Sarrebruck (ALL)-Forbach (partie française);-5550;-1142;4.86;-2819;-873;3.23;-2731;-269;10.15;2.283;2.196;-2605;1464;-0.61;-0.29;-0.32;E;Population et parc en baisse
+86;71501;Chalon-sur-Saône;1235;2342;0.53;1204;850;1.42;31;1492;0.02;2.043;1.958;726;1616;0.14;0.56;-0.42;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+87;00558;Belfort;-3426;-424;8.07;-1627;-411;3.95;-1799;-13;138.91;2.085;2.02;-1655;1230;-0.39;-0.1;-0.29;E;Population et parc en baisse
+88;29501;Quimper;1979;3197;0.62;67;782;0.09;1912;2415;0.79;1.943;1.856;1435;1763;0.24;0.75;-0.51;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+89;00557;Brive-la-Gaillarde;1223;2798;0.44;-18;831;-0.02;1241;1967;0.63;2.061;1.951;782;2016;0.15;0.68;-0.53;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+90;81502;Albi;3150;3918;0.8;662;1172;0.56;2488;2746;0.91;1.994;1.881;1797;2121;0.39;0.97;-0.58;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+91;79501;Niort;3339;3049;1.1;1836;1365;1.34;1503;1684;0.89;1.96;1.89;1757;1292;0.42;0.76;-0.34;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+92;83501;Draguignan;7000;4455;1.57;1822;1272;1.43;5178;3183;1.63;2.235;2.138;3135;1320;0.91;1.3;-0.39;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+93;00556;Saint-Omer;251;2145;0.12;1403;1183;1.19;-1152;962;-1.2;2.358;2.205;36;2108;0.03;0.62;-0.59;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+94;60502;Compiègne;1589;2103;0.76;699;1180;0.59;890;924;0.96;2.14;2.068;1007;1096;0.2;0.59;-0.39;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+95;2B501;Bastia;4205;3600;1.17;2125;1705;1.25;2080;1896;1.1;2.316;2.188;1944;1656;0.56;1.09;-0.53;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+96;33501;La Teste-de-Buch-Arcachon;6705;6489;1.03;3134;2827;1.11;3571;3662;0.98;2.092;1.893;3362;3127;0.92;1.81;-0.89;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+97;41501;Blois;1967;1324;1.49;438;200;2.2;1529;1124;1.36;2.052;2.032;1014;310;0.26;0.37;-0.11;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+98;06501;Menton-Monaco (partie française);-644;1297;-0.5;200;528;0.38;-844;768;-1.1;2.108;2.019;-126;1423;-0.09;0.36;-0.45;D;Population en baisse, parc en hausse
+99;03502;Vichy;401;1537;0.26;-1807;-178;10.13;2208;1716;1.29;1.918;1.843;171;1366;0.06;0.41;-0.35;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+100;24501;Périgueux;581;2214;0.26;-10;913;-0.01;591;1301;0.45;1.951;1.844;331;1883;0.08;0.6;-0.52;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+101;66501;Saint-Cyprien;6909;5629;1.23;2439;2357;1.03;4470;3272;1.37;2.123;1.971;3571;2059;1.02;1.75;-0.73;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+102;38502;Voiron;4758;4126;1.15;1692;1584;1.07;3066;2542;1.21;2.328;2.166;2230;1896;0.7;1.38;-0.68;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+103;42501;Saint-Just-Saint-Rambert;5414;4166;1.3;2826;1765;1.6;2588;2401;1.08;2.451;2.279;2389;1777;0.8;1.49;-0.69;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+104;53501;Laval;-157;1639;-0.1;-446;367;-1.21;289;1272;0.23;2.003;1.905;72;1567;-0.02;0.47;-0.49;D;Population en baisse, parc en hausse
+105;38501;Bourgoin-Jallieu;6752;4592;1.47;2751;1929;1.43;4001;2663;1.5;2.415;2.257;2974;1618;1.03;1.67;-0.64;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+106;01501;Bourg-en-Bresse;4215;2408;1.75;2188;1120;1.95;2027;1289;1.57;2.026;2.019;2317;91;0.63;0.76;-0.13;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+107;00554;Mâcon;4575;3074;1.49;1852;1188;1.56;2723;1886;1.44;2.107;2.048;2302;772;0.69;0.99;-0.3;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+108;02501;Saint-Quentin;-3508;534;-6.57;-2354;112;-21.02;-1154;422;-2.74;2.149;2.003;-1641;2175;-0.5;0.16;-0.66;D;Population en baisse, parc en hausse
+109;88501;Épinal;-271;1465;-0.18;-615;353;-1.74;344;1112;0.31;2.046;1.941;-116;1581;-0.04;0.45;-0.49;D;Population en baisse, parc en hausse
+110;67501;Haguenau;2728;3624;0.75;199;1015;0.2;2529;2609;0.97;2.343;2.153;1499;2125;0.41;1.28;-0.87;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+111;13501;Salon-de-Provence;3221;3394;0.95;3420;2056;1.66;-199;1337;-0.15;2.287;2.129;1571;1823;0.49;1.18;-0.69;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+112;27501;Évreux;230;1355;0.17;-1257;117;-10.76;1487;1238;1.2;2.126;2.032;87;1267;0.03;0.44;-0.41;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+113;60501;Beauvais;1939;1953;0.99;2197;1307;1.68;-258;645;-0.4;2.171;2.076;786;1167;0.3;0.67;-0.37;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+114;36501;Châteauroux;-2399;246;-9.77;-1607;-320;5.02;-792;566;-1.4;2.031;1.938;-1169;1414;-0.36;0.08;-0.44;D;Population en baisse, parc en hausse
+115;9D502;Saint-André;4164;3859;1.08;1547;2309;0.67;2617;1551;1.69;3.048;2.702;1571;2288;0.67;1.8;-1.13;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+116;58501;Nevers;-3528;-22;160.87;-3253;-755;4.31;-275;733;-0.38;1.984;1.873;-1817;1795;-0.53;-0.01;-0.52;E;Population et parc en baisse
+117;00553;Montélimar;5956;3827;1.56;4121;2262;1.82;1835;1564;1.17;2.166;2.078;2807;1019;0.98;1.36;-0.38;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+118;26501;Romans-sur-Isère;2269;2879;0.79;963;1084;0.89;1306;1796;0.73;2.193;2.04;1001;1878;0.36;0.99;-0.63;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+119;81501;Castres;1801;2352;0.77;726;1194;0.61;1075;1158;0.93;2.132;2.014;868;1485;0.29;0.81;-0.52;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+120;11501;Narbonne;5718;4961;1.15;2831;2254;1.26;2887;2707;1.07;2.019;1.872;2989;1972;0.96;1.65;-0.69;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+121;45501;Montargis;2509;2073;1.21;1253;866;1.45;1256;1207;1.04;2.179;2.111;1275;798;0.41;0.74;-0.33;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+122;08501;Charleville-Mézières;-4492;-608;7.38;-3484;-809;4.31;-1008;201;-5.02;2.094;1.977;-2289;1681;-0.69;-0.2;-0.49;E;Population et parc en baisse
+123;51501;Châlons-en-Champagne;-1989;946;-2.1;26;583;0.04;-2015;363;-5.55;2.072;1.942;-817;1763;-0.32;0.32;-0.64;D;Population en baisse, parc en hausse
+124;9D501;Saint-Louis;2327;2753;0.85;751;1324;0.57;1576;1429;1.1;2.966;2.681;868;1884;0.39;1.32;-0.93;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+125;85501;La Roche-sur-Yon;2041;2349;0.87;1564;1577;0.99;477;773;0.62;1.956;1.875;1227;1122;0.35;0.79;-0.44;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+126;00552;Arles;-821;318;-2.58;127;693;0.18;-948;-375;2.53;2.178;2.095;-668;987;-0.14;0.12;-0.26;D;Population en baisse, parc en hausse
+127;9C402;Saint-Laurent-du-Maroni;13832;4276;3.23;2015;927;2.17;11817;3349;3.53;4.635;4.048;3016;1261;2.7;3.7;-1.0;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+128;49501;Cholet;223;1362;0.16;-264;486;-0.54;487;876;0.56;2.133;2.027;72;1290;0.04;0.49;-0.45;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+129;00551;Lunel;4528;3472;1.3;2349;1480;1.59;2179;1991;1.09;2.413;2.251;2031;1441;0.8;1.46;-0.66;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+130;40501;Dax;4030;3750;1.07;781;1092;0.72;3249;2658;1.22;1.98;1.862;2218;1533;0.71;1.32;-0.61;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+131;77501;Bailly-Romainvilliers;4831;2979;1.62;3434;1788;1.92;1397;1190;1.17;2.63;2.479;1880;1098;0.87;1.4;-0.53;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+132;9D405;Saint-Joseph;3641;3480;1.05;1173;1363;0.86;2468;2117;1.17;2.667;2.406;1510;1970;0.66;1.61;-0.95;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
+133;03501;Montluçon;-5019;-1925;2.61;-2289;-863;2.65;-2730;-1061;2.57;1.921;1.857;-2888;963;-0.85;-0.64;-0.21;E;Population et parc en baisse
+134;54405;Longwy (partie française);3623;2036;1.78;1689;960;1.76;1934;1076;1.8;2.212;2.165;1582;454;0.67;0.85;-0.18;A;Croissance démographique, parc en retard (plus de 1,2 hab. par RP supplémentaire)
+135;00555;Bergerac;414;1857;0.22;-782;413;-1.89;1196;1444;0.83;2.076;1.949;351;1506;0.07;0.7;-0.63;C;Parc en avance sur la population (moins de 0,6 hab. par RP supplémentaire)
+;FRANCE;France entière;2853039;2951249;0.97;1283098;1210848;1.06;1569941;1740401;0.9;2.255;2.136;1367946;1583303;0.39;0.91;-0.52;B;Croissance accompagnée par le parc (0,6 à 1,2 hab. par RP supplémentaire)
