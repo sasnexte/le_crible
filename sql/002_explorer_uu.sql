@@ -47,21 +47,25 @@ CREATE TABLE IF NOT EXISTS explorer.uu2020_commune (
 );
 CREATE INDEX IF NOT EXISTS uu2020_commune_uu_idx ON explorer.uu2020_commune (code_uu);
 
--- 4. Périmètre d'étude : les 50 UU retenues
+-- 4. Périmètre d'étude : les 135 UU de 50 000 habitants et plus (RP 2023), décision du 26/11/2026
 CREATE TABLE IF NOT EXISTS explorer.perimetre (
     code_uu          char(5) PRIMARY KEY,
     rang             int NOT NULL,
     libelle          text NOT NULL,
     pop_reference    int NOT NULL,
     millesime_pop    text NOT NULL DEFAULT 'RP2023',
+    tranche          text,                          -- '100 000 hab. et plus' | '50 000 à 99 999 hab.'
     drom             boolean NOT NULL DEFAULT false,
+    metropole        boolean NOT NULL DEFAULT false, -- ville-centre siège d'une des 22 Métropoles
+    diagonale_vide   boolean NOT NULL DEFAULT false, -- département principal dans la diagonale du vide
     commentaire      text
 );
 
--- 5. Portrait de cadrage (sortie de scripts/explorer/uu_top50.py, data/explorer/uu2020_top50.csv)
-CREATE TABLE IF NOT EXISTS explorer.portrait_top50 (
+-- 5. Portrait de cadrage (sortie de scripts/explorer/uu_perimetre.py, data/explorer/uu2020_perimetre.csv)
+CREATE TABLE IF NOT EXISTS explorer.portrait (
     rang int, code_uu char(5) PRIMARY KEY, libelle text, type_uu text, nb_communes int,
     communes_centre text, regions text, departements text, drom boolean,
+    metropole boolean, diagonale_vide boolean, tranche text,
     pop_2023 int, pop_2012 int, evol_pop int, tcam_pop_pct numeric,
     superficie_km2 numeric, densite_hab_km2 numeric,
     logements_2023 int, logements_2012 int, evol_logements_pct numeric,
@@ -95,9 +99,9 @@ CREATE TABLE IF NOT EXISTS explorer.valeur (
     PRIMARY KEY (code_uu, code_indicateur, millesime)
 );
 
--- Vue de travail : les 50 UU avec leur géométrie
+-- Vue de travail : les UU du périmètre avec leur géométrie
 CREATE OR REPLACE VIEW explorer.v_perimetre AS
-SELECT p.rang, p.code_uu, p.libelle, p.pop_reference, p.drom, u.type_uu, u.nb_communes, u.geom
+SELECT p.rang, p.code_uu, p.libelle, p.pop_reference, p.tranche, p.drom, p.metropole, p.diagonale_vide, u.type_uu, u.nb_communes, u.geom
 FROM explorer.perimetre p JOIN explorer.uu2020 u USING (code_uu)
 ORDER BY p.rang;
 
@@ -116,9 +120,11 @@ DO $$ BEGIN
 END $$;
 
 -- Chargement (psql, depuis la racine du dépôt) :
--- \copy explorer.portrait_top50 FROM 'data/explorer/uu2020_top50.csv' WITH (FORMAT csv, HEADER, DELIMITER ';')
--- INSERT INTO explorer.perimetre (code_uu, rang, libelle, pop_reference, drom)
---   SELECT code_uu, rang, libelle, pop_2023, drom FROM explorer.portrait_top50 ON CONFLICT (code_uu) DO NOTHING;
+-- \copy explorer.portrait FROM 'data/explorer/uu2020_perimetre.csv' WITH (FORMAT csv, HEADER, DELIMITER ';')
+-- INSERT INTO explorer.perimetre (code_uu, rang, libelle, pop_reference, tranche, drom, metropole, diagonale_vide)
+--   SELECT code_uu, rang, libelle, pop_2023, tranche, drom, metropole, diagonale_vide FROM explorer.portrait
+--   ON CONFLICT (code_uu) DO UPDATE SET rang = EXCLUDED.rang, pop_reference = EXCLUDED.pop_reference, tranche = EXCLUDED.tranche,
+--     drom = EXCLUDED.drom, metropole = EXCLUDED.metropole, diagonale_vide = EXCLUDED.diagonale_vide;
 -- Géométries (GDAL), après décompression de fonds_uu2020_2026.zip :
 -- ogr2ogr -f PostgreSQL PG:"dbname=le_crible" uu2020_2026.shp -nln explorer.uu2020_import -nlt PROMOTE_TO_MULTI -lco GEOMETRY_NAME=geom -t_srs EPSG:4326 -overwrite
 -- INSERT INTO explorer.uu2020 (code_uu, libelle, nb_communes, millesime_geo, geom)

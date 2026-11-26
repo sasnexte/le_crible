@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""LE CRIBLE / EXPLORER - Top 50 des unités urbaines (zonage INSEE 2020).
+"""LE CRIBLE / EXPLORER - Périmètre d'étude : unités urbaines INSEE 2020 de 50 000 habitants et plus (135 UU).
 
 Télécharge les fichiers INSEE officiels, classe les unités urbaines 2020
 (France entière, DROM compris) par population municipale du dernier
-recensement, et produit les CSV à charger dans Postgres (schéma explorer).
+recensement, retient celles de 50 000 habitants et plus, les étiquette (métropole, diagonale du vide), et produit les CSV à charger dans Postgres (schéma explorer).
 
 Sources (INSEE) :
   - Zonage UU2020, géographie au 01/01/2026 : https://www.insee.fr/fr/information/4802589
@@ -11,7 +11,7 @@ Sources (INSEE) :
     https://www.insee.fr/fr/statistiques/2521169
   - Historique des populations communales 1876-2023 : https://www.insee.fr/fr/statistiques/3698339
 
-Usage : python3 uu_top50.py <dossier_telechargement> <dossier_sortie>
+Usage : python3 uu_perimetre.py <dossier_telechargement> <dossier_sortie>
 Dépendance : python-calamine (pip install python-calamine)
 """
 import csv, io, os, sys, urllib.request, zipfile, collections
@@ -20,8 +20,15 @@ from python_calamine import CalamineWorkbook
 URL_UU = "https://www.insee.fr/fr/statistiques/fichier/4802589/UU2020_au_01-01-2026.zip"
 URL_COMP = "https://www.insee.fr/fr/statistiques/fichier/2521169/comparateur_csv.zip"
 URL_POP = "https://www.insee.fr/fr/statistiques/fichier/3698339/base-pop-historiques-1876-2023.xlsx"
-N = 50
+SEUIL = 50000          # périmètre : UU de 50 000 habitants et plus au RP 2023 (décision du 26/11/2026)
 AN_REF, AN_BASE = "2023", "2012"
+# UU dont la ville-centre est le siège d'une des 22 Métropoles (loi MAPTAM et suivantes) : simple étiquette,
+# l'échelle d'analyse reste l'unité urbaine.
+METROPOLES = {'00851', '00760', '00759', '59702', '33701', '00758', '44701', '06701', '67701', '34701', '35701',
+              '38701', '00755', '00757', '37701', '29701', '54701', '57701', '45701', '21701', '00753', '63701'}
+# Diagonale du vide : départements métropolitains de moins de 50 hab/km² (RP 2023) situés sur l'axe Meuse-Landes,
+# hors massifs alpins (04, 05), Corse et Orne. Une UU y appartient si son département principal (le plus de communes) en fait partie.
+DIAGONALE = {'03', '09', '12', '15', '18', '19', '23', '24', '32', '36', '40', '43', '46', '48', '52', '55', '58', '70', '89'}
 REG = {'01': 'Guadeloupe', '02': 'Martinique', '03': 'Guyane', '04': 'La Réunion', '06': 'Mayotte',
        '11': 'Île-de-France', '24': 'Centre-Val de Loire', '27': 'Bourgogne-Franche-Comté', '28': 'Normandie',
        '32': 'Hauts-de-France', '44': 'Grand Est', '52': 'Pays de la Loire', '53': 'Bretagne',
@@ -68,7 +75,7 @@ def main(dl, out):
                     M[r[2]][(r[3], r[5])] = float(r[6])
 
     uu = sorted((u for u in compo if (AN_REF, 'POP') in M[u]), key=lambda u: -M[u][(AN_REF, 'POP')])
-    top, lignes, comm = uu[:N], [], []
+    top, lignes, comm = [u for u in uu if M[u][(AN_REF, 'POP')] >= SEUIL], [], []
     for rang, u in enumerate(top, 1):
         g = lambda an, v: M[u].get((an, v))
         rs = compo[u]
@@ -84,6 +91,9 @@ def main(dl, out):
             'regions': ' / '.join(REG[k] for k, _ in regs.most_common()),
             'departements': ' ; '.join(k for k, _ in deps.most_common()),
             'drom': u[:2] in ('9A', '9B', '9C', '9D', '9F'),
+            'metropole': u in METROPOLES,
+            'diagonale_vide': deps.most_common(1)[0][0] in DIAGONALE,
+            'tranche': '100 000 hab. et plus' if p23 >= 100000 else '50 000 à 99 999 hab.',
             'pop_' + AN_REF: int(p23), 'pop_' + AN_BASE: int(p12), 'evol_pop': int(p23 - p12),
             'tcam_pop_pct': round(100 * ((p23 / p12) ** (1 / (int(AN_REF) - int(AN_BASE))) - 1), 2),
             'superficie_km2': g(AN_REF, 'SUP'), 'densite_hab_km2': round(p23 / g(AN_REF, 'SUP')),
@@ -100,7 +110,7 @@ def main(dl, out):
         for r in sorted(rs, key=lambda r: -pop[r[0]]):
             comm.append({'code_uu': u, 'codgeo': r[0], 'libgeo': r[1], 'statut': r[5],
                          'dep': r[6], 'reg': r[7], 'pop_' + AN_REF: int(pop[r[0]]) if r[0] in pop else ''})
-    for nom, data in (('uu2020_top50.csv', lignes), ('uu2020_top50_communes.csv', comm)):
+    for nom, data in (('uu2020_perimetre.csv', lignes), ('uu2020_perimetre_communes.csv', comm)):
         with open(os.path.join(out, nom), 'w', newline='', encoding='utf-8') as f:
             w = csv.DictWriter(f, fieldnames=list(data[0]), delimiter=';'); w.writeheader(); w.writerows(data)
     print(f"{len(lignes)} UU, {len(comm)} communes -> {out}")

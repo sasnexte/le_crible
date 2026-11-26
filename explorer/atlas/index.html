@@ -1,4 +1,4 @@
-<title>Atlas des 50 unités urbaines</title>
+<title>Atlas des unités urbaines</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -8,7 +8,7 @@
   --bg:#eef1f4; --surface:#ffffff; --ink:#18212b; --muted:#5b6876; --line:#d5dbe2;
   --land:#e3e8ed; --land-line:#c3ccd5; --uu-other:#c9d2da; --accent:#1f5fa8; --accent-soft:#dce8f6;
   --seq-lo:#e4eef7; --seq-hi:#0d3d7a; --div-neg:#b4462b; --div-mid:#f1ede6; --div-pos:#1f6f8b;
-  --sel:#e0a100;
+  --sel:#e0a100; --diag:#e9dcc4;
   --f-display:"Archivo","Helvetica Neue",Arial,sans-serif;
   --f-text:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
@@ -17,12 +17,12 @@
   --bg:#0f151b; --surface:#161e26; --ink:#e6ebf0; --muted:#97a3b0; --line:#2a3540;
   --land:#1c252e; --land-line:#33404c; --uu-other:#2c3844; --accent:#7fb2ec; --accent-soft:#1d2f44;
   --seq-lo:#1f2d3a; --seq-hi:#8cc4ff; --div-neg:#e0805f; --div-mid:#2a333c; --div-pos:#5cc0d8;
-  --sel:#ffc53d; color-scheme:dark}}
+  --sel:#ffc53d; --diag:#3a3326; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0f151b; --surface:#161e26; --ink:#e6ebf0; --muted:#97a3b0; --line:#2a3540;
   --land:#1c252e; --land-line:#33404c; --uu-other:#2c3844; --accent:#7fb2ec; --accent-soft:#1d2f44;
   --seq-lo:#1f2d3a; --seq-hi:#8cc4ff; --div-neg:#e0805f; --div-mid:#2a333c; --div-pos:#5cc0d8;
-  --sel:#ffc53d; color-scheme:dark}
+  --sel:#ffc53d; --diag:#3a3326; color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--f-text);font-size:14px;line-height:1.45;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:16px 24px}
@@ -83,6 +83,8 @@ select:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid 
 footer{color:var(--muted);font-size:12px;max-width:110ch}
 footer a{color:var(--accent)}
 .land{fill:var(--land);stroke:var(--land-line);stroke-width:.5}
+.land.diag{fill:var(--diag)}
+.dim{opacity:.13}
 .uu-o{fill:var(--uu-other);stroke:none}
 .uu-t{stroke:var(--surface);stroke-width:.6;cursor:pointer}
 .com{fill:none;stroke:var(--ink);stroke-opacity:.45}
@@ -99,12 +101,20 @@ footer a{color:var(--accent)}
 <div class="wrap">
   <header>
     <div>
-      <h1>Atlas des 50 unités urbaines</h1>
-      <p class="sub">Les 50 plus grandes unités urbaines INSEE (zonage 2020), France entière. Population et logement au recensement 2023. Cliquez sur une unité urbaine pour voir ses communes.</p>
+      <h1>Atlas des unités urbaines</h1>
+      <p class="sub">Les 135 unités urbaines INSEE (zonage 2020) de 50 000 habitants et plus, France entière. Population et logement au recensement 2023. Cliquez sur une unité urbaine pour voir ses communes.</p>
     </div>
     <div class="controls">
       <label for="ind">Indicateur</label>
       <select id="ind"></select>
+      <label for="cat">Afficher</label>
+      <select id="cat">
+        <option value="all">Les 135 unités urbaines</option>
+        <option value="metropole">Métropoles (22)</option>
+        <option value="diagonale_vide">Diagonale du vide (9)</option>
+        <option value="drom">Outre-mer (11)</option>
+        <option value="autres">Autres UU métropolitaines (93)</option>
+      </select>
       <div class="seg" role="group" aria-label="Représentation">
         <button id="m-bub" aria-pressed="true">Cercles</button>
         <button id="m-poly" aria-pressed="false">Contours</button>
@@ -114,7 +124,7 @@ footer a{color:var(--accent)}
 
   <div class="main">
     <div class="mapbox">
-      <svg id="map" viewBox="0 0 1000 900" role="img" aria-label="Carte des 50 unités urbaines"></svg>
+      <svg id="map" viewBox="0 0 1000 900" role="img" aria-label="Carte des 135 unités urbaines"></svg>
       <div class="maptools">
         <button id="zin" aria-label="Zoomer">+</button>
         <button id="zout" aria-label="Dézoomer">−</button>
@@ -126,7 +136,7 @@ footer a{color:var(--accent)}
   </div>
 
   <footer>
-    Sources : INSEE, zonage en unités urbaines 2020 et fonds de carte (géographie au 01/01/2026) ; base du comparateur de territoires (RP 2012 et 2023, Filosofi 2023). Population municipale. Contours simplifiés pour l'affichage ; les encarts d'outre-mer ne sont pas à l'échelle de la métropole. Mamoudzou (Mayotte) figure en pointillé, hors classement faute de recensement 2023. Méthode : BookStack, livre Le Crible – Explorer, page « Échelle d'analyse et infrastructure ».
+    Sources : INSEE, zonage en unités urbaines 2020 et fonds de carte (géographie au 01/01/2026) ; base du comparateur de territoires (RP 2012 et 2023, Filosofi 2023). Population municipale. Contours simplifiés pour l'affichage ; les encarts d'outre-mer ne sont pas à l'échelle de la métropole. Mamoudzou (Mayotte) figure en pointillé, hors périmètre faute de recensement 2023. Diagonale du vide : départements de moins de 50 hab/km² sur l'axe Meuse–Landes (définition provisoire). Métropoles : UU dont la ville-centre est le siège d'une des 22 Métropoles. Méthode : BookStack, livre Le Crible – Explorer, page « Échelle d'analyse et infrastructure ».
   </footer>
 </div>
 <div id="tip" hidden></div>
@@ -151,13 +161,14 @@ const IND=[
 const sel=d3.select('#ind');
 IND.forEach((d,i)=>sel.append('option').attr('value',i).text(d.l));
 
-const [top,deps,uuAll,uuTop,coms]=await Promise.all(['top50','departements','uu_toutes','uu_top50','communes_top50'].map(f=>fetch('data/'+f+'.json').then(r=>r.json())));
+const [top,deps,uuAll,uuTop,coms]=await Promise.all(['perimetre','departements','uu_toutes','uu_perimetre','communes_perimetre'].map(f=>fetch('data/'+f+'.json').then(r=>r.json())));
 const byCode=new Map(top.map(d=>[d.code_uu,d]));
 const fc=(t)=>topojson.feature(t,t.objects[Object.keys(t.objects)[0]]);
 const fDeps=fc(deps).features, fAll=fc(uuAll).features.filter(f=>!byCode.has(f.properties.uu2020)), fTop=fc(uuTop).features, fCom=fc(coms).features;
 const comInfo=new Map(); top.forEach(u=>u.communes.forEach(c=>comInfo.set(c[0],{lib:c[1],st:c[2],pop:c[3],uu:u.code_uu})));
 
 // Territoires
+const DIAG=new Set(['03','09','12','15','18','19','23','24','32','36','40','43','46','48','52','55','58','70','89']);
 const DROM={'971':'Guadeloupe','972':'Martinique','973':'Guyane','974':'La Réunion','976':'Mayotte'};
 const isMet=f=>!(f.properties.dep||'').startsWith('97');
 const terrOfUU=c=>({'9A':'971','9B':'972','9C':'973','9D':'974','9F':'976'})[c.slice(0,2)]||'met';
@@ -189,7 +200,7 @@ const paths=new Map(panes.map(p=>[p.id,d3.geoPath(p.proj)]));
 panes.forEach(p=>{
   const path=paths.get(p.id);
   p.gLand=p.g.append('g'); p.gOther=p.g.append('g'); p.gTop=p.g.append('g'); p.gCom=p.g.append('g'); p.gBub=p.g.append('g'); p.gLbl=p.g.append('g');
-  p.gLand.selectAll('path').data(fDeps.filter(f=>terrOfDep(f)===p.id)).join('path').attr('class','land').attr('d',path);
+  p.gLand.selectAll('path').data(fDeps.filter(f=>terrOfDep(f)===p.id)).join('path').attr('class',f=>'land'+(DIAG.has(f.properties.dep)?' diag':'')).attr('d',path);
   p.gOther.selectAll('path').data(fAll.filter(f=>terrOfUU(f.properties.uu2020)===p.id)).join('path').attr('class','uu-o').attr('d',path);
   p.gTop.selectAll('path').data(fTop.filter(f=>terrOfUU(f.properties.uu2020)===p.id)).join('path')
     .attr('class',f=>byCode.has(f.properties.uu2020)?'uu-t':'hc').attr('d',path);
@@ -204,7 +215,7 @@ panes.forEach(p=>{
   const data=top.filter(d=>cent.get(d.code_uu)?.p===p).sort((a,b)=>b.pop_2023-a.pop_2023);
   p.gBub.selectAll('circle').data(data).join('circle').attr('class','bubble')
     .attr('cx',d=>cent.get(d.code_uu).xy[0]).attr('cy',d=>cent.get(d.code_uu).xy[1]).attr('r',d=>Math.max(3,rScale(d.pop_2023)*(p.id==='met'?1:.6)));
-  p.gLbl.selectAll('text').data(data.filter(d=>d.rang<=12||p.id!=='met')).join('text').attr('class','city-lbl')
+  p.gLbl.selectAll('text').data(data).join('text').attr('class','city-lbl')
     .attr('x',d=>cent.get(d.code_uu).xy[0]).attr('y',d=>cent.get(d.code_uu).xy[1]-Math.max(3,rScale(d.pop_2023)*(p.id==='met'?1:.6))-3)
     .attr('text-anchor','middle').text(d=>d.libelle.replace(/ \(partie française\)| \(SUI\)/g,'').replace('Marseille-Aix-en-Provence','Marseille-Aix'));
 });
@@ -218,14 +229,16 @@ function buildScale(ind){
   if(ind.type==='div'){const m=d3.max(vals,Math.abs);const s=d3.scaleDiverging([-m,0,m],t=>t<.5?d3.interpolateLab(css('--div-neg'),css('--div-mid'))(t*2):d3.interpolateLab(css('--div-mid'),css('--div-pos'))((t-.5)*2));color=v=>v==null?css('--uu-other'):s(v);color.s=s;color.dom=[-m,m];return;}
   const ext=d3.extent(vals);const s=d3.scaleSequential(ext,d3.interpolateLab(css('--seq-lo'),css('--seq-hi')));color=v=>v==null?css('--uu-other'):s(v);color.s=s;color.dom=ext;
 }
-let ind=IND[0],mode='bub',selected=null,k=1;
+let ind=IND[0],mode='bub',selected=null,k=1,catF='all';
+const inCat=d=>catF==='all'||(catF==='autres'?!(d.metropole||d.diagonale_vide||d.drom):d[catF]);
 function paint(){
   buildScale(ind);
   panes.forEach(p=>{
     p.gBub.selectAll('circle').attr('fill',d=>ind.type==='size'?css('--accent'):color(d[ind.k]))
-      .classed('sel',d=>d.code_uu===selected).attr('display',d=>mode==='bub'&&d.code_uu!==selected?null:'none');
+      .classed('sel',d=>d.code_uu===selected).classed('dim',d=>!inCat(d)).attr('display',d=>mode==='bub'&&d.code_uu!==selected?null:'none');
+    p.gLbl.selectAll('text').attr('visibility',d=>(catF==='all'?(d.rang<=12||(p.id!=='met'&&d.rang<=56)):inCat(d))?null:'hidden');
     p.gTop.selectAll('path.uu-t').attr('fill',f=>{const d=byCode.get(f.properties.uu2020);return ind.type==='size'?css('--accent'):color(d[ind.k]);})
-      .attr('fill-opacity',f=>mode==='bub'&&f.properties.uu2020!==selected?.35:.85).classed('sel',f=>f.properties.uu2020===selected);
+      .attr('fill-opacity',f=>mode==='bub'&&f.properties.uu2020!==selected?.35:.85).classed('dim',f=>!inCat(byCode.get(f.properties.uu2020))).classed('sel',f=>f.properties.uu2020===selected);
     p.gCom.selectAll('path').attr('display',f=>(selected&&f.properties.uu2020===selected)||(p.id==='met'&&k>=5)?null:'none')
       .attr('stroke-width',f=>(p.id==='met'?.5/k:.4)).attr('stroke-opacity',f=>f.properties.uu2020===selected?.7:.3);
   });
@@ -238,14 +251,16 @@ function legend(){
   if(ind.type==='size'){
     [10e6,1e6,2e5].forEach((v,i)=>{const r=rScale(v)*.45;const x=40+i*80;s.append('circle').attr('cx',x).attr('cy',50-r).attr('r',r).attr('fill','none').attr('stroke',css('--muted'));
       s.append('text').attr('x',x).attr('y',56).attr('text-anchor','middle').attr('y',57).text(v>=1e6?nf(v/1e6)+' M':nf(v/1e3)+' k')});
-    L.append('span').attr('class','note').text('Surface des cercles proportionnelle (échelle réduite dans la légende).');return;
+    L.append('span').attr('class','note').text('Surface des cercles proportionnelle (échelle réduite dans la légende).');
+    L.append('span').attr('class','note').html('<span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--diag);border:1px solid var(--land-line);vertical-align:-1px;margin-right:4px"></span>Départements de la diagonale du vide');return;
   }
   const id='lg'+Math.random().toString(36).slice(2);const gr=s.append('defs').append('linearGradient').attr('id',id);
   d3.range(0,1.01,.1).forEach(t=>gr.append('stop').attr('offset',t).attr('stop-color',color.s(color.dom[0]+t*(color.dom[1]-color.dom[0]))));
   s.append('rect').attr('x',10).attr('y',4).attr('width',240).attr('height',10).attr('rx',2).attr('fill',`url(#${id})`);
   const x=d3.scaleLinear(color.dom,[10,250]);
   x.ticks(5).forEach(t=>s.append('text').attr('x',x(t)).attr('y',28).attr('text-anchor','middle').text(nf(t,Math.abs(t)<10&&t%1?1:0)));
-  L.append('span').attr('class','note').text(ind.k==='niveau_vie_median_eur'||ind.k==='taux_pauvrete_pct'?'Non publié pour Pointe-à-Pitre (gris).':'Cercles proportionnels à la population 2023.');
+  L.append('span').attr('class','note').html('<span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--diag);border:1px solid var(--land-line);vertical-align:-1px;margin-right:4px"></span>Départements de la diagonale du vide');
+  L.append('span').attr('class','note').text(ind.k==='niveau_vie_median_eur'||ind.k==='taux_pauvrete_pct'?'Non publié pour certaines UU d\'outre-mer (gris).':'Cercles proportionnels à la population 2023.');
 }
 
 // zoom (métropole uniquement)
@@ -282,7 +297,7 @@ const uuTip=d=>`<b>${d.rang}. ${d.libelle}</b><br>${nf(d.pop_2023)} hab. · ${d.
 panes.forEach(p=>{
   p.gBub.selectAll('circle').on('mousemove',(ev,d)=>showTip(ev,uuTip(d))).on('mouseleave',hideTip).on('click',(ev,d)=>select(d.code_uu,true));
   p.gTop.selectAll('path.uu-t').on('mousemove',(ev,f)=>showTip(ev,uuTip(byCode.get(f.properties.uu2020)))).on('mouseleave',hideTip).on('click',(ev,f)=>select(f.properties.uu2020,true));
-  p.gTop.selectAll('path.hc').on('mousemove',ev=>showTip(ev,'<b>Mamoudzou</b> (9F601)<br>Hors classement : pas de recensement 2023 à Mayotte')).on('mouseleave',hideTip);
+  p.gTop.selectAll('path.hc').on('mousemove',ev=>showTip(ev,'<b>Mamoudzou</b> (9F601)<br>Hors périmètre : pas de recensement 2023 à Mayotte')).on('mouseleave',hideTip);
   p.gCom.selectAll('path').on('mousemove',(ev,f)=>{const c=comInfo.get(f.properties.codgeo)||{};showTip(ev,`<b>${f.properties.libgeo}</b> <span style="opacity:.75">${f.properties.codgeo}</span><br>${c.st==='C'?'Ville-centre':'Banlieue'} · ${nf(c.pop)} hab.<br>UU ${byCode.get(f.properties.uu2020).libelle}`);
       d3.selectAll('.communes tr').classed('hl',function(){return this.dataset.c===f.properties.codgeo})})
     .on('mouseleave',hideTip).on('click',(ev,f)=>select(f.properties.uu2020,false));
@@ -291,6 +306,7 @@ panes.forEach(p=>{
 // panneau
 const panel=d3.select('#panel');
 const FLAGS=d=>{const o=[];const t=d.tcam_pop_pct;
+ if(d.metropole)o.push('Métropole');if(d.diagonale_vide)o.push('Diagonale du vide');if(d.drom)o.push('Outre-mer');
  if(d.type_uu==='Agglomération internationale')o.push('Agglomération transfrontalière');
  if(t>=1)o.push('Forte croissance');else if(t<=-.1)o.push('Population en recul');else if(t<.1)o.push('Population quasi stable');
  if(d.part_rs_pct>=10)o.push('Résidences secondaires élevées');
@@ -299,10 +315,10 @@ const FLAGS=d=>{const o=[];const t=d.tcam_pop_pct;
  if(d.part_proprietaires_pct<40)o.push('Dominante locative');else if(d.part_proprietaires_pct>=55)o.push('Majorité de propriétaires');
  if(d.taux_pauvrete_pct>=22)o.push('Pauvreté élevée');return o;};
 function renderList(){
-  const data=[...top].sort((a,b)=>(b[ind.k]??-1e9)-(a[ind.k]??-1e9));
+  const data=[...top].filter(inCat).sort((a,b)=>(b[ind.k]??-1e9)-(a[ind.k]??-1e9));
   panel.html('');
   const h=panel.append('div').attr('class','panel-head');
-  h.append('div').attr('class','eyebrow').text('Classement');
+  h.append('div').attr('class','eyebrow').text('Classement · '+d3.select('#cat option:checked').text());
   h.append('h2').text(ind.l);
   h.append('input').attr('class','search').attr('id','q').attr('type','search').attr('placeholder','Chercher une unité urbaine ou une commune').on('input',function(){filter(this.value)});
   const b=panel.append('div').attr('class','panel-body');
@@ -316,7 +332,7 @@ function renderUU(d){
   panel.html('');
   const h=panel.append('div').attr('class','panel-head');
   h.append('button').attr('class','back').text('← Retour au classement').on('click',()=>{selected=null;paint();renderList();svg.transition().duration(500).call(zoom.transform,d3.zoomIdentity)});
-  h.append('div').attr('class','eyebrow').style('margin-top','8px').text(`Rang ${d.rang} sur 50 · ${d.regions}`);
+  h.append('div').attr('class','eyebrow').style('margin-top','8px').text(`Rang ${d.rang} sur 135 · ${d.regions}`);
   h.append('h2').text(d.libelle);
   h.append('div').attr('class','code').text(`UU2020 ${d.code_uu} · ${d.type_uu}`);
   const b=panel.append('div').attr('class','panel-body');
@@ -340,6 +356,7 @@ function renderUU(d){
 }
 function select(code,zoomIt){selected=code;hideTip();paint();renderUU(byCode.get(code));if(zoomIt)zoomTo(code);}
 
+d3.select('#cat').on('change',function(){catF=this.value;paint();if(!selected)renderList();});
 d3.select('#ind').on('change',function(){ind=IND[+this.value];paint();if(selected)renderUU(byCode.get(selected));else renderList();});
 d3.selectAll('.seg button').on('click',function(){mode=this.id==='m-bub'?'bub':'poly';d3.selectAll('.seg button').attr('aria-pressed',function(){return String(this.id===(mode==='bub'?'m-bub':'m-poly'))});paint();});
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{paint();selected?renderUU(byCode.get(selected)):renderList();});
